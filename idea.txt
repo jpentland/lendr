@@ -1,0 +1,150 @@
+Website for recording when somebody lends/borrows something from someone else.
+
+Psuedo-text Interface:
+
+-------------
+- Main Menu -
+-------------
+
+General options:
+	1. Add friend
+	2. List friends
+
+Lender options:
+	3. Lend something to friend
+	4. Have something returned
+
+Borrower options:
+	5. Return something
+	6. Borrow something from friend
+
+--------------
+- Add friend -
+--------------
+
+Enter fiends name:
+Enter friend's ether address
+
+|Submit|
+
+@comment: Friend's address can use QR code. Submit costs money and sets up a contract.
+
+----------------
+- List Friends -
+----------------
+
+* Alex Friend1
+
+* Beth Friend2
+
+* Chad Friend3
+
+|Main Menu|
+
+@comment: List of friends read from blockchain. Clicking on friend shows next screen.
+
+----------------
+- Alex Friend1 -
+----------------
+
+Owes you:
+
+* 1 Beer
+
+You owe:
+
+* 10 Euros
+
+|Main Menu|
+
+@comment: You could click these to go to return/have returned. Again read from blockchain.
+
+----------------------------
+- Lend Something to Friend -
+----------------------------
+
+Name of thing: <name here>
+
+Quantity: <quantity here>
+
+|Submit|
+
+@commment: This will create a transaction on the blockchain. It is not considered "confirmed"
+	   until the borrower also creates a corresponding transaction (see next screen)
+
+----------------------------------
+- Borrow something from a friend -
+----------------------------------
+
+Pending:
+
+* Borrow 1 coffee from Beth Friend2 | Confirm | 
+
+|Main Menu|
+
+@comment: This creates the corresponding transaction to confirm. This means that both parties
+          agree that the lending is taking place "IRL"
+
+--------------------------------
+- Return something to a friend -
+--------------------------------
+
+You owe:
+
+* 10 Euros to Alex
+
+Enter quantity to return:
+
+|Return|
+
+|Main Menu|
+
+@comment: This creates a transaction on the blockchain that the x euros has been returned. This
+          is not considered "confirmed" until the lender creates a corresponding transaction.
+
+---------------------------
+- Have something returned -
+---------------------------
+
+Unconfirmed return:
+
+* 1 Beer  |Confirm|
+
+|Main Menu|
+
+@comment: This creates a confirmation transaction.
+
+-----------------------
+
+More comments:
+
+This could be streamlined of course. For example start up you simply see a freinds list. You click it and you see something like:
+
+-----------------------------------
+------- Andreas YourFriend --------
+-----------------------------------
+---[Lend To]--------[Borrow From]--
+-----------------------------------
+-- Owes you:                     --
+--  * 15 Euros  [Return]         --
+--  * 10 Francs [Return]         --
+--                               --
+-- You owe:                      --
+--  * 1 brofist [Return]         --
+--                               --
+-----------------------------------
+-----------------------------------
+-- Unconfirmed:                  --
+--   * You owe 1 pot brownie     --
+--     [Confirm]                 --
+-----------------------------------
+-----------------------------------
+
+
+------------------------------
+
+
+Contract Structure:
+
+
+
