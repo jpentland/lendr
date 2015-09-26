@@ -1,10 +1,38 @@
-<html>
-<head>
-<script>
-</script>
-</head>
-<body>
-<script>
-</script>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LendR - Main Menu</title>
+    <description="LendR Main Menu">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="theme.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <div id="navbar"></div>
+
+    <div class="col-sm-8">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3>Friends</h3>
+        </div>
+        <div class="panel-body">
+          <div id="friends"></div>
+        </div>
+      </div>
+    </div><!-- /.col-sm-4 -->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      $("#navbar").load('html/navBar.html');
+      $("#friends").load('html/friendList.html');
+    </script>
+
+  </body>
 </html>
