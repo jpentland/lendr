@@ -12,6 +12,34 @@
 		{
 			"fileName": "index.html",
 			"title": "index.html"
+		},
+		{
+			"fileName": "css/bootstrap.css",
+			"title": "bootstrap.css"
+		},
+		{
+			"fileName": "css/bootstrap.min.css",
+			"title": "bootstrap.min.css"
+		},
+		{
+			"fileName": "css/bootstrap-theme.css",
+			"title": "bootstrap-theme.css"
+		},
+		{
+			"fileName": "css/bootstrap-theme.min.css",
+			"title": "bootstrap-theme.min.css"
+		},
+		{
+			"fileName": "js/bootstrap.js",
+			"title": "js/bootstrap.js"
+		},
+		{
+			"fileName": "js/npm.js",
+			"title": "js/npm.js"
+		},
+		{
+			"fileName": "js/bootstrap.min.js",
+			"title": "js/bootstrap.min.js"
 		}
 	],
 	"lastPackageDate": "",
