@@ -1,7 +1,7 @@
 /*
  * This file provides the js interface for the LendR contract
  *
- * Copyright Joseph Pentland 2015
+ * Copyright (c) Joseph Pentland 2015
  *
  * This file is part of LendR.
  *
