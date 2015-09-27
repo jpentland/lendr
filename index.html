@@ -22,8 +22,14 @@
 
     <div id="navbar"></div>
 
-    <div class="alert alert-success" role="alert">
-      <p>Eth Balance = 2.34 ETH</p>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <p>Eth Balance =
+          <script>
+            document.write(balance());
+          </script>
+          ETH </p>
+      </div>
     </div>
 
     <div class="col-sm-8">
