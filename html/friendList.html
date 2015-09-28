@@ -1,48 +1,63 @@
-<div class="panel panel-info">
-  <div class="panel-heading">
-    <table>
-      <tr>
-        <td width="99%"><h4>Alex MacFirstfriend</h4></td>
-        <td>
-          <button type="button" class="btn btn-sm btn-primary">Lend</button>
-        </td>
-      </tr>
-    </table>
-  </div>
-  <div class="panel-body">
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>Owes you</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td width="99%">1 Beer</td>
-          <td>
-            <button type="button" class="btn btn-sm btn-primary">Return</button>
-          </td>
-        </tr>
-        <tr>
-          <td width="99%">10 Euros</td>
-          <td>
-            <button type="button" class="btn btn-sm btn-primary">Return</button>
-          </td>
-        </tr>
-      </tbody>
-      <thead>
-        <tr>
-          <th>You owe</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td width="99%">1 Beer</td>
-          <td>
-            <button type="button" class="btn btn-sm btn-primary">Return</button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
+<div id="friendsList"></div>
+
+<script>
+function createHeading(name) {
+
+  return '<div class="panel-heading"> \
+            <table> \
+              <tr> \
+                <td width="99%"><h4>'+name+'</h4></td> \
+                <td> \
+                  <button type="button" class="btn btn-sm btn-primary">Lend</button> \
+                </td> \
+              </tr> \
+            </table> \
+          </div>';
+}
+
+function createRows(rows) {
+
+  button = '<button type="button" class="btn btn-sm btn-primary">Return</button>'
+
+  body = $("<tbody />");
+
+  for (i in rows) {
+    row = $("<tr>");
+    row.append($("<td width=99%>"+rows[i][0]+" "+rows[i][1]+"</td>"));
+    row.append($("<td />").append($(button)));
+    body.append(row);
+  }
+
+  return body;
+}
+
+function createBody(owesYou, youOwe) {
+
+  table = $("<table class='table table-striped' />");
+
+  table.append($("<thead><tr><th>Owes you:</th></tr></thead>"));
+  table.append(createRows(owesYou));
+
+  table.append($("<thead><tr><th>You owe:</th></tr></thead>"));
+  table.append(createRows(youOwe));
+
+  return table
+}
+
+function friend(name, inField, lendr) {
+
+  div = $("<div class='panel panel-info' />");
+  div.append(createHeading(name));
+  div.append(createBody(lendr.getOwesYou(name), lendr.getYouOwe(name)));
+
+  inField.append(div);
+}
+
+var friendsListDiv = document.getElementById("friendsList");
+var friends = lendr.getFriends();
+
+for (i in friends) {
+  friend(friends[i], $("#friendsList"), lendr);
+}
+
+</script>
