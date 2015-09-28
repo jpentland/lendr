@@ -20,6 +20,7 @@
  *
  * Created: Sep 27 2015
  */
+'use strict'
 
 web3.setProvider(new web3.providers.HttpProvider('http://localhost:8545'));
 var coinbase = web3.eth.coinbase;
@@ -34,13 +35,6 @@ function balance() {
 class LendR {
 
   /*
-   * Constructor to use coinbase by default
-   */
-  constructor(account) {
-    this.account = web3.eth.getBalance(coinbase), "ether");
-  }
-
-  /*
    * Constructor with specific account
    */
   constructor(account) {
@@ -50,28 +44,28 @@ class LendR {
   /*
    * Return a list of friends
    */
-  function getFriends() {
+  getFriends() {
 
   }
 
   /*
    * Return a list of what a given friend owes you and quantities
    */
-  function getOwesYou(friend) {
+  getOwesYou(friend) {
 
   }
 
   /*
    * Return a list of what you owe to a friend and quantities
    */
-  function getYouOwe(friend) {
+  getYouOwe(friend) {
 
   }
 
   /*
    * Add a friend (creating a contract)
    */
-  function addFriend(name) {
+  addFriend(name) {
 
   }
 }
