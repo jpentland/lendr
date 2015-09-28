@@ -52,13 +52,23 @@ class LendR {
    * Return a list of what a given friend owes you and quantities
    */
   getOwesYou(friend) {
-
+  if(friend == "Alex MacFirstfriend") {
+    return [["beer", 1], ["euros", 10]];
+  } else {
+    return [["brofist", 1]];
+  }
   }
 
   /*
    * Return a list of what you owe to a friend and quantities
    */
   getYouOwe(friend) {
+
+	if(friend == "Alex MacFirstfriend") {
+		return [["coffee", 1]];
+	} else {
+		return [["Science Book", 1], ["Pink of Milk", 2]];
+	}
 
   }
 
